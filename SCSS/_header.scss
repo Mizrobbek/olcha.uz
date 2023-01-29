@@ -1,0 +1,209 @@
+.header {
+  &__top {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    color: $grey;
+    border-bottom: 1px solid #d4dee7;
+  }
+
+  &__top-langs {
+    display: flex;
+    list-style-type: none;
+  }
+
+  &__top-lang {
+    margin-left: 15px;
+  }
+
+  &__top-lang-btn {
+    border: none;
+    background-color: transparent;
+    color: $grey;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    cursor: pointer;
+  }
+
+  &__top-lang-btn:hover {
+    color: $red;
+  }
+
+  &__top-lang-btn--active {
+    color: $red;
+  }
+
+  &__top-add {
+    margin-left: auto;
+    display: flex;
+  }
+
+  &__top-add-link {
+    margin-left: 20px;
+    color: $grey;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  &__top-add-link:hover {
+    color: $dark-grey;
+  }
+
+  &__top-mode {
+    display: flex;
+  }
+
+  &__top-mode-text {
+    margin: 0;
+    margin-left: 40px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  &__middle {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__middle-btn {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $red;
+    border-radius: 6px;
+    border: none;
+    width: 95px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  &__middle-btn-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #ffffff;
+    margin-right: 10px;
+  }
+
+  &__middle-search {
+    display: flex;
+    align-items: center;
+  }
+
+  &__middle-input {
+    padding: 17px 115px 17px 20px;
+    border: 1px solid #8c8ca2;
+    border-radius: 6px;
+    width: 444px;
+    height: 50px;
+  }
+
+  &__middle-input-btn {
+    background: $red;
+    border-radius: 6px;
+    margin-left: -50px;
+    border: 1px solid $red;
+    margin-top: 2px;
+    cursor: pointer;
+  }
+
+  &__middle-input-btn-img {
+    padding: 9px 12px;
+  }
+
+  &__middle-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__middle-list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__middle-list-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 140%;
+    color: $onyx-dark;
+  }
+
+  &__middle-list-link:hover {
+    color: $red;
+  }
+
+  &__nav {
+    margin-top: 25px;
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav-list-item-link {
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 140%;
+    color: $onyx-dark;
+  }
+
+  &__nav-list-item-link:hover {
+    padding: 10px 15px;
+    background: #ecf1f4;
+    border-radius: 6px;
+  }
+
+  &__nav-list-item-link--active {
+    padding: 10px 15px;
+    background: #ecf1f4;
+    border-radius: 6px;
+  }
+}
+
+.switch {
+  position: relative;
+  z-index: 1;
+  margin-left: 10px;
+  width: 33px;
+  height: 19px;
+  border: 1px solid $grey;
+  border-radius: 9.5px;
+  transition: all 0.3s ease;
+}
+
+.switch::before {
+  position: absolute;
+  z-index: 1;
+  top: 3px;
+  left: 4px;
+  display: inline-block;
+  content: "";
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: $grey;
+  transition: all 0.3s ease;
+}
+
+.switch-input:checked + .switch {
+  background-color: $red;
+  border: 1px solid $red;
+}
+
+.switch-input:checked + .switch::before {
+  left: calc(100% - 15px);
+  background-color: #fff;
+}
